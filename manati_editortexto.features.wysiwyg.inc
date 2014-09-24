@@ -18,7 +18,7 @@ function manati_editortexto_wysiwyg_default_profiles() {
       'default' => 1,
       'user_choose' => 0,
       'show_toggle' => 0,
-      'theme' => 'kama',
+      'theme' => 'advanced',
       'language' => 'es',
       'buttons' => array(
         'default' => array(
@@ -46,9 +46,8 @@ function manati_editortexto_wysiwyg_default_profiles() {
           'Table' => 1,
         ),
         'drupal' => array(
+          'wysiwyg_imagefield' => 1,
           'break' => 1,
-          'wysiwyg_fields_field_imagen' => 1,
-          'wysiwyg_fields_field_imagen_wysiwyg' => 1,
         ),
       ),
       'toolbar_loc' => 'top',

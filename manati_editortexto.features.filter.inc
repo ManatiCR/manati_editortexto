@@ -14,12 +14,19 @@ function manati_editortexto_filter_default_formats() {
   $formats['manati_texto_formato'] = array(
     'format' => 'manati_texto_formato',
     'name' => 'Editor de texto con formato',
-    'cache' => 0,
+    'cache' => 1,
     'status' => 1,
     'weight' => -10,
     'filters' => array(
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(
+          'filter_url_length' => 72,
+        ),
+      ),
       'wysiwyg' => array(
-        'weight' => -48,
+        'weight' => 0,
         'status' => 1,
         'settings' => array(
           'valid_elements' => 'a[href|target<_blank|title|name],
@@ -148,46 +155,18 @@ table[cellpadding|cellspacing|border|summary|style],thead,tbody,caption,tr,td[st
           'rule_style_urls' => array(),
         ),
       ),
-      'video_filter' => array(
-        'weight' => -47,
-        'status' => 1,
-        'settings' => array(
-          'video_filter_width' => 400,
-          'video_filter_height' => 400,
-          'video_filter_autoplay' => 1,
-          'video_filter_related' => 1,
-          'video_filter_html5' => 1,
-        ),
-      ),
-      'filter_tokens' => array(
-        'weight' => -45,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_url' => array(
-        'weight' => -43,
-        'status' => 1,
-        'settings' => array(
-          'filter_url_length' => 72,
-        ),
-      ),
       'filter_htmlcorrector' => array(
-        'weight' => -39,
+        'weight' => 10,
         'status' => 1,
         'settings' => array(),
       ),
       'pathologic' => array(
-        'weight' => -38,
+        'weight' => 50,
         'status' => 1,
         'settings' => array(
           'local_paths' => '',
           'protocol_style' => 'full',
         ),
-      ),
-      'wysiwyg_fields' => array(
-        'weight' => -37,
-        'status' => 1,
-        'settings' => array(),
       ),
     ),
   );
